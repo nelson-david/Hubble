@@ -1,0 +1,306 @@
+
+@media (max-width: 1199.5px){
+    .lastestmovies__scroll{
+        height: 600px;
+    }
+    .singlemovie__card img{
+        height: 300px;
+    }
+    .App .movies__section{
+        padding: 10px 0px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .hottestmovie__card img.header__img{
+        height: 300px;
+    }
+    .trending__movies{
+        padding: 0px 5px;
+    }
+    .personbasic__data img{
+        height: 340px;
+    }
+}
+
+
+@media (max-width: 991.5px){
+    .personbasic__data img{
+        height: 400px;
+    }
+    .App .movies__foryou{
+        padding: 10px 5px;
+        padding-bottom: 0px;
+    }
+    .App .landingpage__header{
+        padding: 10px 15px;
+    }
+    .hottestmovie__card img.header__img{
+        height: 400px;
+    }
+    .singlemovie__headercard .singlemovie__info .facts{
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        padding-bottom: 0px;
+    }
+    .singlemovie__headercard .singlemovie__info .facts span{
+        margin-bottom: 15px;
+    }
+    .singlemovie__headercard .singlemovie__info .facts svg{
+        margin-top: -12px;
+    }
+}
+
+@media (max-width: 850.5px){
+    .movie__trailer div iframe{
+        height: 400px!important;
+    }
+    .singlemovie__headercard .singlemovie__info .cardheader__info .people li{
+        width: 50%;
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 767.5px){
+    .App .landingpage__header .headerimg__div{
+        display: none;
+    }
+    .App .movies__foryou{
+        padding: 10px 20px;
+        padding-bottom: 0px;
+    }
+    .App .landingpage__header{
+        padding: 10px 5px;
+    }
+    #hottestmovie__col{
+        display: none;
+    }
+    .App .movies__section{
+        padding: 10px 10px;
+    }
+    .trending__movies{
+        padding: 0px;
+    }
+    .personbasic__data{
+        display: flex;
+        padding: 0px;
+    }
+    .personbasic__data img{
+        width: 260px;
+        height: 350px;
+    }
+    .personbasic__data div{
+        padding: 0px 30px;
+    }
+    .persondetail__data p{
+        padding-bottom: 0px;
+    }
+    .lastestmovies__scroll.single__person{
+        height: 500px;
+    }
+}
+
+@media (max-width: 630.5px){
+    .App .landingpage__header{
+        padding: 10px 0px;
+    }
+    .App .movies__foryou{
+        padding: 10px 0px;
+        border-radius: 0px;
+    }
+    .App .landingpage__header .header__section{
+        border-radius: 10px;
+    }
+    .singlemovie__card img{
+        height: 250px;
+    }
+    .App .movies__foryou h3.title{
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+    .lastestmovies__scroll{
+        height: 500px;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 600.5px){
+    .custom__col{
+        padding: 0px 5px;
+    }
+}
+
+@media (max-width: 575.5px){
+    .singlemovie__headercard img.header__img{
+        height: 300px;
+    }
+}
+
+@media (max-width: 530.5px){
+    .App .container-fluid{
+        padding: 0px;
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
+        -moz-overflow-x: hidden;
+        -o-overflow-x: hidden;
+    }
+    .App .landingpage__header .header__section{
+        border-radius: 0px;
+        padding: 30px 20px;
+    }
+    .App .movies__foryou{
+        padding: 10px 20px;
+        border-radius: 0px;
+    }
+    .App .landingpage__header .header__section h1.title{
+        font-size: 3.5rem;
+    }
+    .App .movies__section{
+        padding: 10px 10px;
+    }
+    .custom2__col{
+        padding: 0px 10px;
+    }
+    .movie__trailer div iframe{
+        height: 350px!important;
+    }
+}
+
+@media (max-width: 464.5px){
+    .custom__nav{
+        padding: 5px;
+    }
+    .loader .failed h4{
+        padding: 100px 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 460.5px){
+    .singlemovie__card img{
+        height: 300px;
+    }
+    .custom__col{
+        -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .lastestmovies__scroll{
+        height: 530px;
+    }
+    .personbasic__data img{
+        width: 230px;
+        height: 330px;
+    }
+    .personbasic__data div{
+        padding: 0px 15px;
+    }
+    .lastestmovies__scroll.single__person{
+        height: 480px;
+    }
+}
+
+@media (max-width: 440.5px){
+    .hottestmovie__cardbody h3.movie__title{
+        font-size: 1.5rem;
+    }
+    .App .landingpage__header .header__section{
+        padding: 30px 20px;
+    }
+    .App .landingpage__header .header__section h1.title{
+        font-size: 3rem;
+    }
+    .custom__col{
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .hottestmovie__card img.header__img{
+        height: 250px;
+    }
+    .movieinfo__card{
+        padding: 15px 0px;
+    }
+    .movieinfo__card div h3{
+        font-weight: 600!important;
+        font-size: 20px;
+    }
+    .hottestmovie__cardbody ul.movie__details li{
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: 600!important;
+    }
+    .hottestmovie__cardbody ul.movie__details li span{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 425.5px){
+    .networkToast{
+        justify-content: center;
+    }
+    .networkToast div{
+        border-radius: 10px;
+        border: 2px solid var(--accent-color);
+    }
+}
+
+@media (max-width: 400.5px){
+    .personbasic__data{
+        display: block;
+    }
+    .personbasic__data img{
+        width: 100%;
+        height: 400px;
+    }
+    .personbasic__data ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .personbasic__data ul li{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 385.5px){
+    .App .landingpage__header .header__section h1.title{
+        font-size: 2.8rem;
+    }
+    .singlemovie__card img{
+        height: 280px;
+    }
+    .custom__col{
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+    .movie__trailer div iframe{
+        height: 300px!important;
+    }
+}
+
+@media (max-width: 365.5px){
+    .App .landingpage__header .header__section h1.title{
+        font-size: 2.5rem;
+    }
+    .singlemovie__card img{
+        height: 260px;
+    }
+    .lastestmovies__scroll{
+        height: 490px;
+    }
+    .singlemovie__headercard .singlemovie__info .cardheader__info .people li{
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 335.5px){
+    .App .landingpage__header .header__section h1.title{
+        font-size: 2.3rem;
+    }
+    .custom__col{
+        -ms-flex: 0 0 90%;
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+}
