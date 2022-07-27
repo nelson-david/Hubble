@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import SingleMovieCard from "../components/card/SingleMovieCard";
 import InfiniteLoader from "../components/loader/InfiniteLoader";
 import Loader from "../components/loader/Loader";
-import { API_KEY, API_URL } from "../config";
+import { API_URL, API_KEY } from "../config";
 
 const Search = ({ setRedirect, searchText }) => {
 

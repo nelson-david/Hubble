@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_KEY, API_URL } from "../config";
+import { API_URL, API_KEY } from "../config";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from '../components/loader/Loader';
 import axios from "axios";

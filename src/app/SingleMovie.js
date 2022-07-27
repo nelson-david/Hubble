@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import withRouter from "../components/libs/withRouter";
 import axios from "axios";
-import { API_KEY, API_URL } from "../config";
+import { API_URL, API_KEY } from "../config";
 import Loader from "../components/loader/Loader";
 import SingleCastCard from "../components/card/SingleCastCard";
 import ScrollContainer from "react-indiana-drag-scroll";

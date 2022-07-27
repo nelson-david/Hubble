@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
 import SingleMovieCard from "../components/card/SingleMovieCard";
 import Loader from "../components/loader/Loader";
-import { API_KEY, API_URL, IMG_URL } from "../config";
+import { API_URL, IMG_URL, API_KEY } from "../config";
 
 const SinglePerson = () => {
 
