@@ -1,6 +1,5 @@
 # Hubble - Latest Movies and Review Site
-
-(https://res.cloudinary.com/ruthless-labs/image/upload/v1658893646/screencapture-hubblemovies-netlify-app-movies-2022-07-27-03_55_13_yd7wip.png)
+![Screenshot]<br>(https://res.cloudinary.com/ruthless-labs/image/upload/v1658893646/screencapture-hubblemovies-netlify-app-movies-2022-07-27-03_55_13_yd7wip.png)
 <br><br>
 ![Screenshot](https://res.cloudinary.com/ruthless-labs/image/upload/v1658893589/screencapture-hubblemovies-netlify-app-2022-07-27-03_54_53_1_suoo1w.png)
 <br><br>
