@@ -63,9 +63,9 @@ const SinglePerson = () => {
                     <div className="col-lg-3 col-md-4">
                         <div className="personbasic__data">
                             <img
-                                src={`${IMG_URL}/w500${person.profile_path}`}
+                                data-src={`${IMG_URL}/w500${person.profile_path}`}
                                 alt={person.name}
-                                className="header__img"
+                                className="lazyload header__img"
                             />
                             <div>
                                 <h3>Personal Info</h3>

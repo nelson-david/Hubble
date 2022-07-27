@@ -25,9 +25,9 @@ const SingleMovieHeader = ({ movie, movieCrews }) => {
                 <div className="col-lg-3 col-md-4 col-sm-5">
                     <div>
                         <img
-                            src={`${IMG_URL}/w500${movie.poster_path}`}
+                            data-src={`${IMG_URL}/w500${movie.poster_path}`}
                             alt={movie.title}
-                            className="header__img"
+                            className="lazyload header__img"
                         />
                     </div>
                 </div>

@@ -14,8 +14,9 @@ const SingleMovieCard = ({movie, disabledHover}) => {
             >
                 <Link to={`/movies/${movie.id}`} className="singlemovie__card" title={movie.title} data-aos="flip-down">
                     <img
-                        src={`${IMG_URL}/w500${movie.poster_path}`}
+                        data-src={`${IMG_URL}/w500${movie.poster_path}`}
                         alt={movie.title}
+                        className="lazyload"
                     />
                     <div className="singlemovie__cardbody">
                         <h3
@@ -39,8 +40,9 @@ const SingleMovieCard = ({movie, disabledHover}) => {
             >
                 <Link to={`/movies/${movie.id}`} className="singlemovie__card" title={movie.title} data-aos="flip-down">
                     <img
-                        src={`${IMG_URL}/w500${movie.poster_path}`}
+                        data-src={`${IMG_URL}/w500${movie.poster_path}`}
                         alt={movie.title}
+                        className="lazyload"
                     />
                     <div className="singlemovie__cardbody">
                         <h3

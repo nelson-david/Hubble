@@ -11,8 +11,9 @@ const SingleCastCard = ({cast}) => {
         >
             <Link to={`/person/${cast.id}`} className="singlecast__card">
                 <img
-                    src={`${IMG_URL}/w500${cast.profile_path}`}
+                    data-src={`${IMG_URL}/w500${cast.profile_path}`}
                     alt={cast.name}
+                    className="lazyload"
                 />
                 <div className="singlecast__cardbody">
                     <p>{cast.name}</p>

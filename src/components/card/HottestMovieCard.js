@@ -18,9 +18,9 @@ const HottestMovieCard = ({movie}) => {
     return (
         <Link to={`/movies/${movie.id}`} className="hottestmovie__card">
             <img
-                src={`${IMG_URL}/w500${movie.poster_path}`}
+                data-src={`${IMG_URL}/w500${movie.poster_path}`}
                 alt={movie.title}
-                className="header__img"
+                className="lazyload header__img"
             />
             <div className="hottestmovie__cardbody">
                 <h3
