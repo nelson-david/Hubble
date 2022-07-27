@@ -3,14 +3,20 @@ import { motion } from "framer-motion";
 import { IMG_URL } from "../../config";
 import { useLongPress } from 'use-long-press';
 import MovieModal from "../modal/MovieModal";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const SingleMovieCard = ({movie, disabledHover}) => {
     
     const [showModal, setShowModal] = useState(false);
+    const enabled = true;
 
-    const previewMovie = useLongPress(() => {
+    const callback = useCallback(event => {
         setShowModal(true);
+    }, []);
+
+    const previewMovie = useLongPress(enabled ? callback : null, {
+        onFinish: event => console.log(''),
+        onMove: event => console.log(''),
     });
     
     return (
