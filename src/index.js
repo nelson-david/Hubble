@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import { render } from 'react-snapshot';
 import { BrowserRouter as Router } from "react-router-dom";
-import './assets/css/bootstrap.css';
+import 'https://res.cloudinary.com/ruthless-labs/raw/upload/v1658892190/bootstrap_bl7lda.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css';
 import './index.css';
