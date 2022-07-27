@@ -673,7 +673,7 @@ input:-webkit-autofill:active {
     display: block;
 }
 .singlecast__card img{
-    height: 250px;
+    height: 240px;
     width: 100%;
     object-position: center;
     object-fit: cover;
