@@ -17,6 +17,8 @@ const SingleMovieCard = ({movie, disabledHover}) => {
     const previewMovie = useLongPress(enabled ? callback : null, {
         onFinish: event => console.log(''),
         onMove: event => console.log(''),
+        cancelOnMovement: true,
+        detect: 'both'
     });
     
     return (
