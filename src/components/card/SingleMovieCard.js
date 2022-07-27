@@ -27,7 +27,6 @@ const SingleMovieCard = ({movie, disabledHover}) => {
                         </h3>
                         <ul className="movie__details">
                             <li>Viewer: <span>{movie.adult===true?<>PG-13</>:<>General</>}</span></li>
-                            <li>Runtime: <span>1hr 20m</span></li>
                             <li>Rating: <span>{String(movie.vote_average).slice(0,3)}/10</span></li>
                         </ul>
                     </div>
@@ -53,7 +52,6 @@ const SingleMovieCard = ({movie, disabledHover}) => {
                         </h3>
                         <ul className="movie__details">
                             <li>Viewer: <span>{movie.adult===true?<>PG-13</>:<>General</>}</span></li>
-                            <li>Runtime: <span>1hr 20m</span></li>
                             <li>Rating: <span>{String(movie.vote_average).slice(0,3)}/10</span></li>
                         </ul>
                     </div>

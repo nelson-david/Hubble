@@ -129,11 +129,26 @@
     .custom__modal{
         width: 400px;
     }
+    .custom__nav{
+        padding: 10px 5px;
+    }
+    .custom__nav ul li a{
+        padding: 10px 15px;
+    }
 }
 
 @media (max-width: 575.5px){
     .singlemovie__headercard img.header__img{
         height: 300px;
+    }
+    .custom__nav{
+        padding-top: 7px;
+    }
+    .custom__nav ul li a span{
+        display: none;
+    }
+    .custom__nav ul li a i{
+        display: block;
     }
 }
 
@@ -168,9 +183,6 @@
 }
 
 @media (max-width: 464.5px){
-    .custom__nav{
-        padding: 5px;
-    }
     .loader .failed h4{
         padding: 100px 20px;
         font-size: 25px;

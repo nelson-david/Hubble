@@ -5,13 +5,15 @@ import Aos from "aos";
 import Loader from "./components/loader/Loader";
 import { Offline } from "react-detect-offline";
 import OfflineBar from "./components/card/OfflineBar";
-import Search from "./app/Search";
 
 const NotFound = lazy(() => import('./pages/NotFound'));
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const SingleMovie = lazy(() => import('./app/SingleMovie'));
 const Movies = lazy(() => import('./app/Movies'));
 const SinglePerson = lazy(() => import('./app/SinglePerson'));
+const TvShow = lazy(() => import('./app/TvShow'));
+const Search = lazy(() => import('./app/Search'));
+const SingleTv = lazy(() => import('./app/SingleTv'));
 
 const App = () => {
 
@@ -74,6 +76,20 @@ const App = () => {
 							exact
 							element={
 								<SingleMovie />
+							}
+						/>
+						<Route
+							path="/tv"
+							exact
+							element={
+								<TvShow />
+							}
+						/>
+						<Route
+							path="/tv/:id"
+							exact
+							element={
+								<SingleTv />
 							}
 						/>
 						<Route

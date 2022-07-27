@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchModal from "../modal/SearchModal";
+import * as RiIcons from "react-icons/ri";
+import * as GiIcons from "react-icons/gi";
+import { motion } from "framer-motion";
 
 const Navbar = ({  redirect, setRedirect, searchText, setSearchText }) => {
 
@@ -22,26 +25,49 @@ const Navbar = ({  redirect, setRedirect, searchText, setSearchText }) => {
                     <Link
                         to="/"
                         onClick={(e) => {e.preventDefault(); setShowModal(!showModal)}}
-                        title="Sidebar Icon"
+                        title="Search"
                     >
-                        search
+                        <i><RiIcons.RiSearch2Line /></i>
+                        <span>search</span>
                     </Link>
                 </li>
                 <li>
                     <Link
+                        to="/explore"
+                        title="Explore"
+                    >
+                        <i><GiIcons.GiCompass /></i>
+                        <span>explore</span>
+                    </Link>
+                </li>
+                <motion.li
+                    whileHover={{ scale: 1.13 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <Link
                         to="/"
                         className="title"
-                        title="App Title"
+                        title="HUbble"
                     >
                         Hubble
+                    </Link>
+                </motion.li>
+                <li>
+                    <Link
+                        to="/tv"
+                        title="TV Shows"
+                    >
+                        <i><RiIcons.RiTvLine /></i>
+                        <span>tv shows</span>
                     </Link>
                 </li>
                 <li>
                     <Link
                         to="/movies"
-                        title="Movies Icon"
+                        title="Movies"
                     >
-                        movies
+                        <i><RiIcons.RiMovie2Line /></i>
+                        <span>movies</span>
                     </Link>
                 </li>
             </ul>

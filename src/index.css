@@ -55,7 +55,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
 }
 html{
     scroll-behavior: smooth;
@@ -109,6 +109,10 @@ input:-webkit-autofill:active {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden!important;
+}
+.App .container-fluid{
+    overflow-x: hidden!important;
 }
 .custom2__col{
     padding: 0px;
@@ -158,9 +162,19 @@ input:-webkit-autofill:active {
     font-weight: 500!important;
     color: var(--accent-color);
     animation: gradient 6s ease infinite;
+    text-shadow: 0px 0px 10px var(--accent-color);
 }
 .custom__nav ul li a.icon{
     font-size: 18px;
+}
+.custom__nav ul li a i{
+    font-style: normal;
+    font-size: 20px;
+    display: none;
+    text-align: center;
+}
+.custom__nav ul li a span{
+    display: block;
 }
 
 .App .landingpage__header{
@@ -516,6 +530,10 @@ input:-webkit-autofill:active {
 .singlemovie__headercard .singlemovie__info .facts span.runtime{
     margin-left: 5px;
     padding: 1px 5px;
+}
+.singlemovie__headercard .singlemovie__info .facts .white-grey{
+    color: var(--white);
+    font-size: 15px;
 }
 .singlemovie__headercard .singlemovie__info .cardheader__info{
     padding: 15px 0px;
@@ -927,6 +945,7 @@ input:-webkit-autofill:active {
 
 .infiniteScroll{
     padding: 0px 15px;
+    overflow-x: hidden!important;
 }
 
 
