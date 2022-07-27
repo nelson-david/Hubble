@@ -1,5 +1,6 @@
 import { IMG_URL } from "../../config";
 import { BsCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const SingleTvHeader = ({ movie, movieCrews }) => {
 
@@ -81,7 +82,7 @@ const SingleTvHeader = ({ movie, movieCrews }) => {
                                 movieCrews.map((crew) => {
                                     return (
                                     <li className="profile" key={crew.id}>
-                                        <p><a href="/person/930707-colin-trevorrow">{crew.name}</a></p>
+                                        <p><Link to={`/person/${crew.id}`}>{crew.name}</Link></p>
                                         <p className="character">{crew.job}</p>
                                     </li>
                                     )

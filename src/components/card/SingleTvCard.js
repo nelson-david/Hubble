@@ -25,7 +25,7 @@ const SingleTvCard = ({tv}) => {
                 whileTap={{ scale: 0.9 }}
                 {...previewTvShow()}
             >
-                <Link to={`/tv/${tv.id}`} className="singlemovie__card" title={tv.name} data-aos="flip-down">
+                <Link to={`/tv/${tv.id}`} className="singlemovie__card" title={tv.name} data-aos="fade-in">
                     <img
                         data-src={`${IMG_URL}/w500${tv.poster_path}`}
                         alt={tv.name}

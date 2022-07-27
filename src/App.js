@@ -24,7 +24,6 @@ const App = () => {
 	const [lightMode, setLightMode] = useState(window.localStorage.getItem("hubble_lightmode"));
 
 	const toggleDarkMode = () => {
-		console.log("LMODE: ", lightMode);
 		if (lightMode===null){
 			document.querySelector("body").style.backgroundColor = "white";
 			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";

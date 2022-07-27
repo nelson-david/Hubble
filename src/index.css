@@ -463,9 +463,7 @@ h3.discover-title{
     font-size: 15px;
 }
 
-.singlemovie__headercard{
-    border: 2px solid black;
-}
+
 .singlemovie__headercard img.header__img{
     width: 100%;
     height: 400px;

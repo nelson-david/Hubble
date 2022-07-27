@@ -11,7 +11,9 @@ const Navbar = ({  redirect, setRedirect, searchText, setSearchText, toggleDarkM
 
     const [showModal, setShowModal] = useState(false);
     
-    const toggle = useLongPress(() => {
+    const toggle = useLongPress((e) => {
+        e.preventDefault();
+        e.stopPropagation();
         toggleDarkMode();
     });
 
@@ -48,12 +50,12 @@ const Navbar = ({  redirect, setRedirect, searchText, setSearchText, toggleDarkM
                 <motion.li
                     whileHover={{ scale: 1.13 }}
                     whileTap={{ scale: 0.9 }}
-                    {...toggle()}
                 >
                     <Link
                         to="/"
                         className="title"
                         title="Hubble"
+                        onClick={toggle}
                     >
                         Hubble
                     </Link>

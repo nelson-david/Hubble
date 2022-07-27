@@ -15,12 +15,10 @@
 .light.App .custom__input:focus{
     border: 2px solid var(--accent-color);
 }
-
 .light .custom__nav ul li a{
     color: var(--black);
     font-weight: 800!important;
 }
-
 .light.App .landingpage__header .header__section{
     background-color: rgba(255,255,255,0.5);
 }
@@ -37,7 +35,20 @@
 .light.App .landingpage__header .headerimg__div{
     background-color: rgba(255,255,255,0.5);
 }
-
+.light.App h3.discover-title{
+    color: var(--black);
+    font-weight: 800!important;
+}
+.light.App .explore__div a.discover-link{
+    color: var(--dim-grey);
+    font-weight: 700!important;
+}
+.light.App .search__div h3.header__text{
+    color: var(--dim-grey);
+    font-weight: 800!important;
+    font-size: 23px;
+    text-align: center;
+}
 .light .singlemovie__card{
     background-color: rgba(255,255,255,0.7);
     border: 2px solid var(--white);
@@ -82,9 +93,6 @@
     color: var(--dim-grey);
 }
 
-
-
-
 /* Misc Light mode */
 .light .networkToast{
     background-color: rgba(255,255,255,0.05);
@@ -95,4 +103,92 @@
 .light .networkToast div p{
     color: var(--black);
     font-weight: 600!important;
+}
+
+.light.App .singlemovie__headercard h3.title{
+    color: var(--black);
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts svg{
+    color: var(--black);
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts span{
+    color: var(--black);
+    font-weight: 600!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts span.certification{
+    border: 1px solid var(--black);
+    color: var(--black);
+    font-weight: 700!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts span.rating{
+    color: var(--dim-grey);
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts span.genres a{
+    color: var(--dim-grey);
+}
+.light.App .singlemovie__headercard .singlemovie__info .facts span.genres a:hover{
+    color: var(--black);
+}
+.light.App .singlemovie__headercard .singlemovie__info .cardheader__info i{
+    color: var(--dim-grey);
+    font-weight: 600!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .cardheader__info h4{
+    color: var(--black);
+    font-weight: 700!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .cardheader__info p{
+    color: var(--dim-grey);
+    font-weight: 500!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .cardheader__info .people li p{
+    color: var(--dim-grey);
+    font-weight: 600!important;
+}
+.light.App .singlemovie__headercard .singlemovie__info .cardheader__info .people li a{
+    color: var(--black);
+}
+.light.App .moviemore__info{
+    background-color: rgba(255,255,255,0.5);
+}
+.light.App .moviemore__info ul li h4{
+    color: var(--black);
+    font-weight: 600!important;
+}
+.light.App .moviemore__info ul li p{
+    color: var(--dim-grey);
+    font-weight: 500!important;
+}
+.light.App .movie__casts{
+    background-color: rgba(255,255,255,0.5);
+}
+.light.App .movie__casts h3{
+    font-weight: 700!important;
+    color: var(--black);
+}
+.light.App .singlecast__card .singlecast__cardbody p{
+    color: var(--black);
+    font-weight: 800!important;
+}
+.light.App .singlecast__card .singlecast__cardbody span{
+    color: var(--dim-grey);
+    font-weight: 700!important;
+}
+.light.App .personbasic__data h3{
+    color: var(--black);
+}
+.light.App .personbasic__data ul li h4{
+    color: var(--black);
+}
+.light.App .personbasic__data ul li p{
+    color: var(--dim-grey);
+}
+.light.App .persondetail__data h3{
+    color: var(--black);
+}
+.light.App .persondetail__data h4{
+    color: var(--black);
+}
+.light.App .persondetail__data p{
+    color: var(--dim-grey);
 }

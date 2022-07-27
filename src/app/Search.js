@@ -58,7 +58,7 @@ const Search = ({ setRedirect, searchText }) => {
             <Navigate to="/" />
             :
             <>
-            <h3 className="header__text">{searchText}</h3>
+            <h3 className="header__text">Search Results for {searchText}</h3>
             <br />
             {
                 loading.inProgress?
