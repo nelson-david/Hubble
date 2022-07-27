@@ -21,12 +21,34 @@ const App = () => {
 
 	const [redirect, setRedirect] = useState(false);
 	const [searchText, setSearchText] = useState(null);
+	const [lightMode, setLightMode] = useState(window.localStorage.getItem("hubble_lightmode"));
+
+	const toggleDarkMode = () => {
+		console.log("LMODE: ", lightMode);
+		if (lightMode===null){
+			document.querySelector("body").style.backgroundColor = "white";
+			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+			window.localStorage.setItem("hubble_lightmode", "true");
+			setLightMode("true");
+		}else{
+			document.querySelector("body").style.backgroundColor = "black";
+			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+			window.localStorage.removeItem("hubble_lightmode");
+			setLightMode(null);
+		}
+	}
 
 
 	useEffect(() => {
 		Aos.init({
 			duration: "2000"
 		})
+
+		const lightmode = window.localStorage.getItem("hubble_lightmode");
+		if (lightmode==="true"){
+			document.querySelector("body").style.backgroundColor = "white";
+			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+		}
 
 		const accentColors = ["#A770EF", "#4ecdc4", "#2980b9",
 			"#f8b500", "#f46b45", "#ba8b02", "#00bf8f", "#b993d6",
@@ -46,13 +68,14 @@ const App = () => {
 	}, [])
 
 	return (
-		<div className="App">
+		<div className={lightMode!==null?"light App":"App"}>
 			<Suspense fallback={<Loader loadingStyle="basic" failed={false} />}>
 				<Navbar
 					redirect={redirect}
 					setRedirect={setRedirect}
 					searchText={searchText}
 					setSearchText={setSearchText}
+					toggleDarkMode={toggleDarkMode}
 				/>
 				<Offline>
 					<OfflineBar />

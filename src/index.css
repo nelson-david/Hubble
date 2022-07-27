@@ -30,6 +30,7 @@
     --powder-blue: #a5bdd9;
     --aliceblue: #f0f8ff;
     --white-grey: #adb5bd;
+    --dim-white: #fffff9;
     --black-one: #000006;
     --border-black: #1e1f20;
     --signika-negative: 'Signika Negative', sans-serif;
@@ -191,13 +192,13 @@ input:-webkit-autofill:active {
     color: var(--deep-grey);
     font-family: var(--mulish);
     text-transform: uppercase;
-    font-weight: 500!important;
+    font-weight: 700!important;
     font-size: 15px;
     display: flex;
 }
 .App .landingpage__header .header__section span.minititle i{
     font-style: normal;
-    font-weight: 800!important;
+    font-weight: 900!important;
     color: var(--dim-grey);
     border: 1.5px solid var(--dim-grey);
     font-size: 12px;
@@ -351,7 +352,7 @@ input:-webkit-autofill:active {
 .singlemovie__cardbody h3.movie__title{
     padding: 15px 2px;
     margin: 0px;
-    font-weight: 600!important;
+    font-weight: 700!important;
     font-size: 16px;
     text-align: left;
 }
@@ -376,12 +377,6 @@ input:-webkit-autofill:active {
     border: 1px solid var(--accent-color);
 }
 .singlemovie__cardbody ul.movie__details li span{
-    display: block;
-    font-weight: 500!important;
-    color: var(--white-grey);
-}
-.singlemovie__cardbody ul.movie__details li a{
-    display: block;
     font-weight: 500!important;
     color: var(--white-grey);
 }
@@ -389,6 +384,7 @@ input:-webkit-autofill:active {
 .App .movies__section{
     padding: 30px 30px;
     background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 .App .movies__section .movieheader__div{
     padding: 10px 0px;
@@ -1043,7 +1039,7 @@ h3.discover-title{
 .custom__backdrop{
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -1059,6 +1055,28 @@ h3.discover-title{
     z-index: 3;
     display: block;
 }
+.custom__modal img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.custom__modal.movie_preview{
+    width: 320px;
+    padding: 15px;
+    border-radius: 20px;
+    color: var(--accent-color);
+    transition: 0.4s all ease-in-out;
+}
+.custom__modal.movie_preview img{
+    height: 310px;
+    border-radius: 15px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.custom__modal.movie_preview img:hover{
+    filter: blur(2.5px) brightness(60%);
+}
+
 .custom__input{
     width: 100%;
     border: 2px solid var(--accent-transparent-4);

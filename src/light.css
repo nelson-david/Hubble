@@ -1,0 +1,98 @@
+.light.App{
+    background-color: var(--white);
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp');
+}
+.light.App .custom__backdrop{
+    background: rgba(255,255,255,0.9);
+}
+.light.App .custom__modal{
+    background-color: var(--dim-white);
+}
+.light.App .custom__input{
+    background-color: var(--dim-white);
+    color: var(--black);
+}
+.light.App .custom__input:focus{
+    border: 2px solid var(--accent-color);
+}
+
+.light .custom__nav ul li a{
+    color: var(--black);
+    font-weight: 800!important;
+}
+
+.light.App .landingpage__header .header__section{
+    background-color: rgba(255,255,255,0.5);
+}
+.light.App .landingpage__header .header__section span.minititle{
+    color: var(--black);
+}
+.light.App .landingpage__header .header__section h1.title{
+    color: var(--black);
+}
+.light.App .landingpage__header .header__section .movie__ratings span{
+    color: var(--black);
+    font-weight: 700!important;
+}
+.light.App .landingpage__header .headerimg__div{
+    background-color: rgba(255,255,255,0.5);
+}
+
+.light .singlemovie__card{
+    background-color: rgba(255,255,255,0.7);
+    border: 2px solid var(--white);
+    color: var(--black);
+}
+.light .singlemovie__card:hover{
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+.light .singlemovie__cardbody ul.movie__details li{
+    border: 1px solid var(--dim-white);
+    color: var(--black);
+    background-color: var(--dim-white);
+}
+.light .singlemovie__cardbody ul.movie__details li:hover{
+    border: 1px solid var(--accent-color);
+}
+.light .singlemovie__cardbody ul.movie__details li span{
+    font-weight: 700!important;
+    color: var(--dim-grey);
+}
+.light.App .movies__section{
+    background-color: rgba(255,255,255,0.5);
+}
+.light .hottestmovie__card{
+    background-color: rgba(255,255,255,0.9);
+    color: var(--black);
+}
+.light .hottestmovie__card:hover{
+    color: var(--accent-color);
+}
+.light .hottestmovie__card ul.movie__details li{
+    border: 1px solid var(--dim-white);
+    color: var(--black);
+    background-color: var(--dim-white);
+}
+.light .hottestmovie__card ul.movie__details li:hover{
+    border: 1px solid var(--accent-color);
+}
+.light .hottestmovie__card ul.movie__details li span{
+    font-weight: 700!important;
+    color: var(--dim-grey);
+}
+
+
+
+
+/* Misc Light mode */
+.light .networkToast{
+    background-color: rgba(255,255,255,0.05);
+}
+.light .networkToast div{
+    background-color: #fffff2;
+}
+.light .networkToast div p{
+    color: var(--black);
+    font-weight: 600!important;
+}

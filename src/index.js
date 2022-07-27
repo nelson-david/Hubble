@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css';
 import './index.css';
 import './media.css';
+import './light.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
