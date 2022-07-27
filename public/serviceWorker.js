@@ -5,7 +5,8 @@ const urlsToCache = [
 	'/',
 	'/movies',
 	'/person',
-	'/search'
+	'/search',
+	'android/android-launchericon-192-192.png'
 ];
 
 self.addEventListener('install', function(event){
@@ -24,3 +25,12 @@ self.addEventListener('fetch', function(event){
 		return fetch(event.request);
 	}))
 })
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(caches.keys().then((keyList) => {
+    return Promise.all(keyList.map((key) => {
+      if (key === CACHE_NAME) { return; }
+      return caches.delete(key);
+    }))
+  }));
+});
