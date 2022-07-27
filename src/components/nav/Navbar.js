@@ -33,7 +33,7 @@ const Navbar = ({  redirect, setRedirect, searchText, setSearchText }) => {
                 </li>
                 <li>
                     <Link
-                        to="/explore"
+                        to="/discover"
                         title="Explore"
                     >
                         <i><GiIcons.GiCompass /></i>
