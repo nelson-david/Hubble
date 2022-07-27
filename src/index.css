@@ -67,8 +67,8 @@ a{
     text-decoration: none!important;
 }
 .spin svg{
-    -webkit-animation: spin-animation 0.5s infinite linear;
-    animation: spin-animation 0.5s infinite linear;
+    -webkit-animation: spin-animation 0.7s infinite linear;
+    animation: spin-animation 0.7s infinite linear;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -78,6 +78,16 @@ a{
     background-color: #4f586b;
     border-radius: 0px;
     background-clip: padding-box;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: background-color 99999s ease-out!important;
+    transition: background-color 99999s ease-out!important;
+    -webkit-text-fill-color: var(--white)!important;
+    -webkit-font-family: var(--mulish)!important;
+    font-family: var(--mulish)!important;
 }
 .Toastify .Toastify__toast-body{
     font-family: var(--mulish)!important;
@@ -102,6 +112,16 @@ a{
 }
 .custom2__col{
     padding: 0px;
+}
+.search__div{
+    padding: 30px 0px;
+}
+.search__div h3.header__text{
+    color: var(--white-grey);
+    font-weight: 700!important;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
 }
 
 .custom__nav{
@@ -136,6 +156,8 @@ a{
     font-family: var(--font-head);
     letter-spacing: 1px;
     font-weight: 500!important;
+    color: var(--accent-color);
+    animation: gradient 6s ease infinite;
 }
 .custom__nav ul li a.icon{
     font-size: 18px;
@@ -560,6 +582,9 @@ a{
     font-size: 16px;
     padding: 10px 25px;
 }
+.seemore__div a:hover{
+    color: var(--accent-color);
+}
 
 .movieinfo__card{
     padding: 15px;
@@ -804,7 +829,7 @@ a{
     left: 0px;
     height: 90px;
     width: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
     pointer-events: none;
     display: flex;
     justify-content: flex-end;
@@ -851,12 +876,14 @@ a{
 }
 .loader p{
     margin: 0px;
-    color: var(--white-grey);
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 700!important;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 150px 50px;
+    color: var(--accent-color);
+    animation: gradient 6s ease infinite;
 }
 .loader span{
     padding: 20px;
@@ -873,6 +900,31 @@ a{
     padding: 130px 50px;
     font-size: 20px;
 }
+.loader div.blockanimation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+}
+.loader div.blockanimation span{
+    font-size: 150px;
+    font-weight: 700!important;
+    font-family: var(--font-head);
+    background: linear-gradient(-45deg, #CB5EEE, #4BE1EC, #9D8EEE, #e73c7e, #23a6d5, 
+        #23d5ab, #7f53ac, #647dee, #09c6f9);
+    background-size: 400% 400%;
+    color: var(--accent-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    word-break: break-word;
+    cursor: text;
+    animation: gradient 3s ease infinite;
+    display: block;
+}
+
 .infiniteScroll{
     padding: 0px 15px;
 }
@@ -939,6 +991,18 @@ a{
 @keyframes SHOW-BOX {
     0%   { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 

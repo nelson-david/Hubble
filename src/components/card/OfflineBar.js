@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const OfflineBar = () => {
     const [offline, setOffline] = useState(true);
 
     return (
-        <>
+        <AnimatePresence exitBeforeEnter>
         {
             offline?
             <motion.div
@@ -22,7 +22,7 @@ const OfflineBar = () => {
                 </motion.div>
             </motion.div>:''
         }
-        </>
+        </AnimatePresence>
     )
 }
 

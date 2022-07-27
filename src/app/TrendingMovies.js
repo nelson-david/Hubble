@@ -32,11 +32,6 @@ const TrendingMovies = () => {
 		})
     }
 
-    // const handleClick = () => {
-    //     const endpoint = `${API_URL}/trending/movie/week?api_key=${API_KEY}&language=en-US&page=${page+1}`
-    //     fetchMovies(endpoint);  
-    // }
-
     useEffect(() => {
 		axios({
 			method:"GET",

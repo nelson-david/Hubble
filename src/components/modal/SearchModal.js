@@ -1,17 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
-const SearchModal = ({ showModal, setShowModal }) => {
-    
-    const [searchText, setSearchText] = useState("");
+const SearchModal = ({ showModal, setShowModal, setRedirect, redirect, setSearchText, searchText }) => {
 
     const searchData = (e) => {
         e.preventDefault();
-        console.log("TXT: ", searchText);
+        setShowModal(false);
+        setRedirect(true);
     }
 
     return (
         <AnimatePresence>
+            {redirect?<Navigate to={`/search?q=${searchText}`} />:''}
             { showModal && (
                 <motion.div
                     className="fixed-top custom__backdrop"
@@ -28,7 +28,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
                                     name="hubble-search"
                                     type="search"
                                     placeholder="Enter Your Search Here...."
-                                    value={searchText}
+                                    value={searchText===null?"":searchText}
                                     onChange={(e) => setSearchText(e.target.value)}
                                 />
                             </div>

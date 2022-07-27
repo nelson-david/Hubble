@@ -1,10 +1,11 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/nav/Navbar";
 import Aos from "aos";
 import Loader from "./components/loader/Loader";
 import { Offline } from "react-detect-offline";
 import OfflineBar from "./components/card/OfflineBar";
+import Search from "./app/Search";
 
 const NotFound = lazy(() => import('./pages/NotFound'));
 const LandingPage = lazy(() => import('./pages/LandingPage'));
@@ -13,6 +14,10 @@ const Movies = lazy(() => import('./app/Movies'));
 const SinglePerson = lazy(() => import('./app/SinglePerson'));
 
 const App = () => {
+
+	const [redirect, setRedirect] = useState(false);
+	const [searchText, setSearchText] = useState(null);
+
 
 	useEffect(() => {
 		Aos.init({
@@ -31,8 +36,6 @@ const App = () => {
 			setInterval(function(){
 				let selectedColor = accentColors[Math.floor(Math.random() * accentColors.length)];
 				document.documentElement.style.setProperty('--accent-color', selectedColor);
-				document.documentElement.style.setProperty('--accent-transparent', `${selectedColor}33`);
-				document.documentElement.style.setProperty('--accent-transparent-2', `${selectedColor}33`);
 			}, 1000);
 		}
 		changeColor();
@@ -41,7 +44,12 @@ const App = () => {
 	return (
 		<div className="App">
 			<Suspense fallback={<Loader loadingStyle="basic" failed={false} />}>
-				<Navbar />
+				<Navbar
+					redirect={redirect}
+					setRedirect={setRedirect}
+					searchText={searchText}
+					setSearchText={setSearchText}
+				/>
 				<Offline>
 					<OfflineBar />
 				</Offline>
@@ -73,6 +81,17 @@ const App = () => {
 							exact
 							element={
 								<SinglePerson />
+							}
+						/>
+						<Route
+							path="/search"
+							exact
+							element={
+								<Search
+									redirect={redirect}
+									setRedirect={setRedirect}
+									searchText={searchText}
+								/>
 							}
 						/>
 						<Route

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchModal from "../modal/SearchModal";
 
-const Navbar = () => {
+const Navbar = ({  redirect, setRedirect, searchText, setSearchText }) => {
 
     const [showModal, setShowModal] = useState(false);
 
@@ -12,6 +12,10 @@ const Navbar = () => {
             <SearchModal
                 showModal={showModal}
                 setShowModal={setShowModal}
+                redirect={redirect}
+                setRedirect={setRedirect}
+                searchText={searchText}
+                setSearchText={setSearchText}
             />
             <ul>
                 <li>

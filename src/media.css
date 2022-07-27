@@ -126,6 +126,9 @@
     .custom__col{
         padding: 0px 5px;
     }
+    .custom__modal{
+        width: 400px;
+    }
 }
 
 @media (max-width: 575.5px){
@@ -231,6 +234,15 @@
     .hottestmovie__cardbody ul.movie__details li span{
         font-size: 13px;
     }
+    .custom__backdrop{
+        padding: 50px 10px;
+    }
+    .custom__modal{
+        width: 100%;
+    }
+    .custom__input{
+        height: 70px!important;
+    }
 }
 
 @media (max-width: 425.5px){
@@ -259,6 +271,21 @@
     .personbasic__data ul li{
         margin-right: 20px;
     }
+    .moviemore__info ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .moviemore__info ul li{
+        margin-right: 20px;
+    }
+    .search__div{
+        padding: 10px 0px;
+    }
+    .search__div h3.header__text{
+        font-size: 23px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 385.5px){
@@ -275,6 +302,16 @@
     }
     .movie__trailer div iframe{
         height: 300px!important;
+    }
+    .custom__backdrop{
+        padding: 40px 5px;
+    }
+    .custom__modal{
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .custom__input{
+        height: 60px!important;
     }
 }
 

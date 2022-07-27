@@ -8,9 +8,13 @@ const Loader = ({loadingStyle, failed}) => {
                 <>
                 {
                     loadingStyle==="basic"?
+                    // <div className="blockanimation">
+                    //     <span>H</span>
+                    // </div>
                     <p className="spin">
                         <ImSpinner8 />
-                    </p>:''
+                    </p>
+                    :''
                 }
                 </>
                 :

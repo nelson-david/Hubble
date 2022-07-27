@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,5 +50,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-snapshot": "^1.3.0"
+  },
+  "reactSnapshot": {
+    "include": [
+      "/",
+      "/movies",
+      "/person"
+    ],
+    "snapshotDelay": 300
   }
 }
