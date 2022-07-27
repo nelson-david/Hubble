@@ -26,6 +26,7 @@ const SingleMovieCard = ({movie, disabledHover}) => {
                 whileHover={{ scale: 1 }}
                 whileTap={{ scale: 0.9 }}
                 {...previewMovie()}
+                cancelOnMovement={true}
             >
                 <Link to={`/movies/${movie.id}`} className="singlemovie__card" title={movie.title} data-aos="fade-in">
                     <img
