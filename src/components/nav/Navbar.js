@@ -55,7 +55,7 @@ const Navbar = ({  redirect, setRedirect, searchText, setSearchText, toggleDarkM
                         to="/"
                         className="title"
                         title="Hubble"
-                        onClick={toggle}
+                        {...toggle()}
                     >
                         Hubble
                     </Link>

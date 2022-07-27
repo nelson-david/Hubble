@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import axios from "axios";
 import SingleMovieCard from "../components/card/SingleMovieCard";
-import { API_URL, API_KEY } from "../config";
+import { API_URL, API_KEY, IMG_URL } from "../config";
 import Loader from '../components/loader/Loader';
 import { Link } from 'react-router-dom';
 
-const LandingPage = () => {
+const LandingPage = ({ setBackgroundImage }) => {
 
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState({
@@ -23,13 +23,14 @@ const LandingPage = () => {
             if (res.status===200){
                 const movieData = res.data.results.slice(0, 20);
                 setMovies(movieData);
+                setBackgroundImage(`${IMG_URL}/w500${movieData[15].poster_path}`);
                 setLoading({inProgress: false, failed: false});
             }
 		})
 		.catch((error) => {
             setLoading({inProgress: true, failed: true});
 		})
-    }, [])
+    }, [setBackgroundImage])
 
     return (
         <>

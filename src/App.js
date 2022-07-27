@@ -22,16 +22,17 @@ const App = () => {
 	const [redirect, setRedirect] = useState(false);
 	const [searchText, setSearchText] = useState(null);
 	const [lightMode, setLightMode] = useState(window.localStorage.getItem("hubble_lightmode"));
+	const [backgroundImage, setBackgroundImage] = useState('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp');
 
 	const toggleDarkMode = () => {
 		if (lightMode===null){
 			document.querySelector("body").style.backgroundColor = "white";
-			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('" + backgroundImage + "')"
 			window.localStorage.setItem("hubble_lightmode", "true");
 			setLightMode("true");
 		}else{
 			document.querySelector("body").style.backgroundColor = "black";
-			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('" + backgroundImage + "')"
 			window.localStorage.removeItem("hubble_lightmode");
 			setLightMode(null);
 		}
@@ -40,13 +41,13 @@ const App = () => {
 
 	useEffect(() => {
 		Aos.init({
-			duration: "2000"
+			duration: "1600"
 		})
 
 		const lightmode = window.localStorage.getItem("hubble_lightmode");
 		if (lightmode==="true"){
 			document.querySelector("body").style.backgroundColor = "white";
-			document.querySelector("body").style.backgroundImage = "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://res.cloudinary.com/ruthless-labs/image/upload/v1658892092/img4_pjm6um.webp')";
+			document.querySelector("body").style.backgroundImage = `linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('${backgroundImage}')`;
 		}
 
 		const accentColors = ["#A770EF", "#4ecdc4", "#2980b9",
@@ -64,10 +65,15 @@ const App = () => {
 			}, 1000);
 		}
 		changeColor();
-	}, [])
+	}, [backgroundImage])
+
+	// style={`{lightMode===null?{backgroundImage: "linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('${backgroundImage}')!important;"}:{backgroundImage: "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('${backgroundImage}')!important;"}`}
 
 	return (
-		<div className={lightMode!==null?"light App":"App"}>
+		<div
+			className={lightMode===null?"App":"light App"}
+			style={lightMode===null?{backgroundImage: "linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('" + backgroundImage + "')"}:{backgroundImage: "linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('" + backgroundImage + "')"}}
+		>
 			<Suspense fallback={<Loader loadingStyle="basic" failed={false} />}>
 				<Navbar
 					redirect={redirect}
@@ -85,7 +91,9 @@ const App = () => {
 							path="/"
 							exact
 							element={
-								<LandingPage />
+								<LandingPage
+									setBackgroundImage={setBackgroundImage}
+								/>
 							}
 						/>
 						<Route
