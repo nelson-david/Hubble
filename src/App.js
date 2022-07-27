@@ -20,8 +20,6 @@ const App = () => {
 
 
 	useEffect(() => {
-		console.log("PROCESSES: ", process.env);
-		
 		Aos.init({
 			duration: "2000"
 		})

@@ -29,19 +29,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300;400;500;700;800;900&family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&family=Sansita:wght@400;700;800;900&display=swap" rel="stylesheet" />
-		<meta name="msapplication-TileColor" content="#111216">
-		<meta name="msapplication-config" content="/img/ico/browserconfig.xml">
-		<meta name="theme-color" content="#111216">
-		<link rel="canonical" href="https://hubblemovies.netlify.app/" />
+	<meta name="msapplication-TileColor" content="#000004">
+	<meta name="msapplication-config" content="/img/ico/browserconfig.xml">
+	<meta name="theme-color" content="#000005">
+	<link rel="canonical" href="https://hubblemovies.netlify.app/" />
   </head>
   <body>
     <noscript>Hubble Movies.</noscript>
     <div id="root"></div>
 
+	<script src="%PUBLIC_URL%/lazysizes.min.js" async=""></script>
 	<script>
-		// $.getJSON('https://ipapi.co/json/', function(data) {
-		// 	ipaddress = data["ip"];
-		// });
+		if ('serviceWorker' in navigator){
+			window.addEventListener('load', function(){
+				navigator.serviceWorker.register('/serviceWorker.js').then(function(registration){
+					console.log('ServiceWorker registration was successful with scope: ',
+						registration.scope);
+				}, function(err){
+					console.log('ServiceWorker registration failed: ', err)
+				})
+			})
+		}
 	</script>
   </body>
 </html>

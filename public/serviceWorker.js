@@ -3,7 +3,9 @@ console.log("GOT TO ME");
 let CACHE_NAME = 'hubblecache';
 const urlsToCache = [
 	'/',
-	'/movies'
+	'/movies',
+	'/person',
+	'/search'
 ];
 
 self.addEventListener('install', function(event){

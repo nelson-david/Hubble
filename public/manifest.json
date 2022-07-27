@@ -3,6 +3,18 @@
   "name": "Movie as a Hobby ❤️",
   "icons": [
     {
+      "src": "android/android-launchericon-192-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "android/android-launchericon-512-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
       "src": "windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
     },
