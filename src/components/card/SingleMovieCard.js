@@ -17,11 +17,15 @@ const SingleMovieCard = ({movie, disabledHover}) => {
     const previewMovie = useLongPress(enabled ? callback : null, {
         onFinish: event => console.log(''),
         onMove: event => console.log(''),
-        threshold: 700,
+        threshold: 600,
         captureEvent: true,
         cancelOnMovement: true,
         detect: 'both'
     });
+
+    const disableRightClick = (e) => {
+        e.preventDefault();
+    }
     
     return (
         <>
@@ -36,9 +40,15 @@ const SingleMovieCard = ({movie, disabledHover}) => {
                 whileHover={{ scale: 1 }}
                 whileTap={{ scale: 0.9 }}
                 {...previewMovie()}
-                cancelOnMovement={true}
+                onContextMenu={disableRightClick}
             >
-                <Link to={`/movies/${movie.id}`} className="singlemovie__card" title={movie.title} data-aos="fade-in">
+                <Link
+                    to={`/movies/${movie.id}`}
+                    className="singlemovie__card"
+                    title={movie.title}
+                    data-aos="fade-in"
+                    onContextMenu={disableRightClick}
+                >
                     <img
                         data-src={`${IMG_URL}/w500${movie.poster_path}`}
                         alt={movie.title}
@@ -63,8 +73,15 @@ const SingleMovieCard = ({movie, disabledHover}) => {
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 {...previewMovie()}
+                onContextMenu={disableRightClick}
             >
-                <Link to={`/movies/${movie.id}`} className="singlemovie__card" title={movie.title} data-aos="fade-in">
+                <Link
+                    to={`/movies/${movie.id}`}
+                    className="singlemovie__card"
+                    title={movie.title}
+                    data-aos="fade-in"
+                    onContextMenu={disableRightClick}
+                >
                     <img
                         data-src={`${IMG_URL}/w500${movie.poster_path}`}
                         alt={movie.title}
