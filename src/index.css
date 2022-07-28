@@ -60,6 +60,7 @@ body{
     user-select: none!important;
     -webkit-user-drag: none!important;
     user-zoom: none!important;
+    -webkit-touch-callout: none;
 }
 html{
     scroll-behavior: smooth;
