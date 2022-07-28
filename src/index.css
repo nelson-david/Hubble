@@ -56,6 +56,10 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden!important;
+    -webkit-user-select: none!important;
+    user-select: none!important;
+    -webkit-user-drag: none!important;
+    user-zoom: none!important;
 }
 html{
     scroll-behavior: smooth;
